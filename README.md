@@ -1,10 +1,6 @@
 ![Ironhack logo](https://i.imgur.com/1QgrNNw.png). Helloo!!
 
-<<<<<<< HEAD
-# Ironhack Data Analytics
-=======
-# Ironhack Data Analytics Labs 1
->>>>>>> d8367b4cabe54e44f506bad8257e1412ddf6dacc
+# Ironhack Data Analytics Labs
 
 ## Getting Started
 
