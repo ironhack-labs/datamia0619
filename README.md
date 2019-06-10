@@ -38,4 +38,4 @@ The instructional team will review your branch and provide feedback.
 
 :exclamation: Update your branch regularly because the curriculum development team is developing new assignments for you as the course proceeds. Make sure you have committed all your codes then exectue `git pull origin master` to obtain the latest code from the `master` branch.
 
-### Happy coding!
+### Happy coding!!
