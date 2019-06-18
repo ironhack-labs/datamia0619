@@ -1,0 +1,2 @@
+DELETE FROM Car WHERE ID = 4;
+
