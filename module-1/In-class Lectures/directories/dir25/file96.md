@@ -1,0 +1,1 @@
+This is document 96 in directory dir25
