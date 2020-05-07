@@ -14,7 +14,11 @@ Resolving Git conflicts and merging branches is an important skill every softwar
 
 If you have any doubts about the prerequisites please clarify with your instructor or teaching assistants.
 
+<<<<<<< HEAD
 ### Overview of Steps
+=======
+### Overview of Steps Steps
+>>>>>>> ae0a01841162cfee91fba5868acfb8b6b99d2a89
 
 Below is a summary of the steps you will follow in this lab:
 
