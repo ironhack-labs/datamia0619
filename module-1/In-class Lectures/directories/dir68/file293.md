@@ -1,0 +1,1 @@
+This is document 293 in directory dir68
