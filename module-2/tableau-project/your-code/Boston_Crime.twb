@@ -1,0 +1,1740 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20192.19.0621.1547                               -->
+<workbook source-build='2019.2.1 (20192.19.0621.1547)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='crime' inline='true' name='federated.0t9qugv1con1xz16wpojo1ozo3mq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='crime' name='textscan.1yerdcf1fq1t2k1bmgmlk0wlehm1'>
+            <connection class='textscan' directory='/Users/tompelletier/Ironhack/datamia0619/module-2/tableau-project/Data/crimes-in-boston' filename='crime.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1yerdcf1fq1t2k1bmgmlk0wlehm1' name='crime.csv' table='[crime#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='INCIDENT_NUMBER' ordinal='0' />
+            <column datatype='integer' name='OFFENSE_CODE' ordinal='1' />
+            <column datatype='string' name='OFFENSE_CODE_GROUP' ordinal='2' />
+            <column datatype='string' name='OFFENSE_DESCRIPTION' ordinal='3' />
+            <column datatype='string' name='DISTRICT' ordinal='4' />
+            <column datatype='integer' name='REPORTING_AREA' ordinal='5' />
+            <column datatype='string' name='SHOOTING' ordinal='6' />
+            <column datatype='datetime' name='OCCURRED_ON_DATE' ordinal='7' />
+            <column datatype='string' name='YEAR' ordinal='8' />
+            <column datatype='string' name='MONTH' ordinal='9' />
+            <column datatype='string' name='DAY_OF_WEEK' ordinal='10' />
+            <column datatype='string' name='HOUR' ordinal='11' />
+            <column datatype='string' name='UCR_PART' ordinal='12' />
+            <column datatype='string' name='STREET' ordinal='13' />
+            <column datatype='real' name='Lat' ordinal='14' />
+            <column datatype='real' name='Long' ordinal='15' />
+            <column datatype='string' name='Location' ordinal='16' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>INCIDENT_NUMBER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[INCIDENT_NUMBER]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>INCIDENT_NUMBER</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_CODE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OFFENSE_CODE]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>OFFENSE_CODE</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_CODE_GROUP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OFFENSE_CODE_GROUP]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>OFFENSE_CODE_GROUP</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFFENSE_DESCRIPTION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[OFFENSE_DESCRIPTION]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>OFFENSE_DESCRIPTION</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DISTRICT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DISTRICT]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>DISTRICT</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>REPORTING_AREA</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[REPORTING_AREA]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>REPORTING_AREA</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SHOOTING</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[SHOOTING]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>SHOOTING</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OCCURRED_ON_DATE</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[OCCURRED_ON_DATE]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>OCCURRED_ON_DATE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[YEAR]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>YEAR</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MONTH</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[MONTH]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>MONTH</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DAY_OF_WEEK</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DAY_OF_WEEK]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>DAY_OF_WEEK</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOUR</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HOUR]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>HOUR</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UCR_PART</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[UCR_PART]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>UCR_PART</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STREET</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STREET]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>STREET</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lat]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>Lat</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Long</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Long]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>Long</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Location]</local-name>
+            <parent-name>[crime.csv]</parent-name>
+            <remote-alias>Location</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Day Of Week' datatype='string' name='[DAY_OF_WEEK]' role='dimension' type='nominal' />
+      <column caption='District' datatype='string' name='[DISTRICT]' role='dimension' type='nominal' />
+      <column caption='Hour' datatype='string' name='[HOUR]' role='dimension' type='nominal' />
+      <column caption='Incident Number' datatype='string' name='[INCIDENT_NUMBER]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Month' datatype='string' name='[MONTH]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Occurred On Date' datatype='datetime' name='[OCCURRED_ON_DATE]' role='dimension' type='ordinal' />
+      <column caption='Offense Code' datatype='integer' name='[OFFENSE_CODE]' role='dimension' type='ordinal' />
+      <column caption='Offense Code Group' datatype='string' name='[OFFENSE_CODE_GROUP]' role='dimension' type='nominal' />
+      <column caption='Offense Description' datatype='string' name='[OFFENSE_DESCRIPTION]' role='dimension' type='nominal' />
+      <column caption='Reporting Area' datatype='integer' name='[REPORTING_AREA]' role='measure' type='quantitative' />
+      <column caption='Shooting' datatype='string' name='[SHOOTING]' role='dimension' type='nominal' />
+      <column caption='Street' datatype='string' name='[STREET]' role='dimension' type='nominal' />
+      <column caption='Ucr Part' datatype='string' name='[UCR_PART]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='string' name='[YEAR]' role='dimension' type='nominal' />
+      <column-instance column='[MONTH]' derivation='Attribute' name='[attr:MONTH:nk]' pivot='key' type='nominal' />
+      <column-instance column='[DISTRICT]' derivation='None' name='[none:DISTRICT:nk]' pivot='key' type='nominal' />
+      <column-instance column='[MONTH]' derivation='None' name='[none:MONTH:nk]' pivot='key' type='nominal' />
+      <column-instance column='[OFFENSE_CODE_GROUP]' derivation='None' name='[none:OFFENSE_CODE_GROUP:nk]' pivot='key' type='nominal' />
+      <column-instance column='[YEAR]' derivation='None' name='[none:YEAR:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[Exclusions (Month,Year)]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:MONTH:nk]' />
+          <groupfilter function='level-members' level='[none:YEAR:nk]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/tompelletier/Documents/My Tableau Repository/Datasources/crime.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='07/18/2019 07:33:43 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='crime' increment-value='%null%' refresh-type='create' rows-inserted='319073' timestamp-start='2019-07-18 19:33:43.348' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>INCIDENT_NUMBER</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[INCIDENT_NUMBER]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>INCIDENT_NUMBER</remote-alias>
+              <ordinal>0</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>308295</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OFFENSE_CODE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OFFENSE_CODE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OFFENSE_CODE</remote-alias>
+              <ordinal>1</ordinal>
+              <family>crime.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>518</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OFFENSE_CODE_GROUP</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OFFENSE_CODE_GROUP]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OFFENSE_CODE_GROUP</remote-alias>
+              <ordinal>2</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>138</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OFFENSE_DESCRIPTION</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OFFENSE_DESCRIPTION]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OFFENSE_DESCRIPTION</remote-alias>
+              <ordinal>3</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>528</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DISTRICT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DISTRICT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DISTRICT</remote-alias>
+              <ordinal>4</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>REPORTING_AREA</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[REPORTING_AREA]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>REPORTING_AREA</remote-alias>
+              <ordinal>5</ordinal>
+              <family>crime.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3454</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SHOOTING</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[SHOOTING]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SHOOTING</remote-alias>
+              <ordinal>6</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OCCURRED_ON_DATE</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[OCCURRED_ON_DATE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OCCURRED_ON_DATE</remote-alias>
+              <ordinal>7</ordinal>
+              <family>crime.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>232822</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>YEAR</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[YEAR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>YEAR</remote-alias>
+              <ordinal>8</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>MONTH</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[MONTH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>MONTH</remote-alias>
+              <ordinal>9</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DAY_OF_WEEK</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DAY_OF_WEEK]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DAY_OF_WEEK</remote-alias>
+              <ordinal>10</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>HOUR</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[HOUR]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>HOUR</remote-alias>
+              <ordinal>11</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>UCR_PART</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[UCR_PART]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>UCR_PART</remote-alias>
+              <ordinal>12</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>STREET</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[STREET]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>STREET</remote-alias>
+              <ordinal>13</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7550</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lat</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lat]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lat</remote-alias>
+              <ordinal>14</ordinal>
+              <family>crime.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31153</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Long</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Long]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Long</remote-alias>
+              <ordinal>15</ordinal>
+              <family>crime.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31153</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Location</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Location]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Location</remote-alias>
+              <ordinal>16</ordinal>
+              <family>crime.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31153</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.662058' measure-ordering='alphabetic' measure-percentage='0.337942' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[attr:MONTH:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%many-values%</bucket>
+            </map>
+            <map to='#9e3d22'>
+              <bucket>&quot;12&quot;</bucket>
+            </map>
+            <map to='#ad4522'>
+              <bucket>&quot;11&quot;</bucket>
+            </map>
+            <map to='#bc4d23'>
+              <bucket>&quot;10&quot;</bucket>
+            </map>
+            <map to='#cb5522'>
+              <bucket>&quot;9&quot;</bucket>
+            </map>
+            <map to='#da5e20'>
+              <bucket>&quot;8&quot;</bucket>
+            </map>
+            <map to='#e76920'>
+              <bucket>&quot;7&quot;</bucket>
+            </map>
+            <map to='#ef7724'>
+              <bucket>&quot;6&quot;</bucket>
+            </map>
+            <map to='#f3882e'>
+              <bucket>&quot;5&quot;</bucket>
+            </map>
+            <map to='#f59a3a'>
+              <bucket>&quot;4&quot;</bucket>
+            </map>
+            <map to='#f5aa4c'>
+              <bucket>&quot;3&quot;</bucket>
+            </map>
+            <map to='#fab869'>
+              <bucket>&quot;2&quot;</bucket>
+            </map>
+            <map to='#ffc685'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:OFFENSE_CODE_GROUP:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Bomb Hoax&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;HUMAN TRAFFICKING&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Phone Call Complaints&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Aggravated Assault&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Firearm Discovery&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Medical Assistance&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Service&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Auto Theft&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Harassment&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Offenses Against Child / Family&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Verbal Disputes&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Counterfeiting&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Investigate Property&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Property Lost&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Burglary - No Property Taken&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HUMAN TRAFFICKING - INVOLUNTARY SERVITUDE&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Police Service Incidents&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Auto Theft Recovery&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Harbor Related Incidents&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Operating Under the Influence&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Violations&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Explosives&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Liquor Violation&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Robbery&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Aircraft&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Firearm Violations&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Missing Person Located&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Simple Assault&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Embezzlement&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;License Plate Related Incidents&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Residential Burglary&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Ballistics&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;HOME INVASION&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Warrant Arrests&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Criminal Harassment&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Landlord/Tenant Disputes&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Property Related Damage&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Disorderly Conduct&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Larceny&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Prostitution&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Evading Fare&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;License Violation&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Restraining Order Violations&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Fire Related Reports&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Manslaughter&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Search Warrants&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Commercial Burglary&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Investigate Person&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Prisoner Related Incidents&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Biological Threat&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Homicide&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Other Burglary&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Arson&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Fraud&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Missing Person Reported&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Towed&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Drug Violation&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Larceny From Motor Vehicle&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Recovered Stolen Property&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Confidence Games&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;INVESTIGATE PERSON&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Property Found&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Assembly or Gathering Violations&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gambling&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Motor Vehicle Accident Response&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Vandalism&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:DISTRICT:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;D4&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;B2&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;E18&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;D14&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;B3&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;A1&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;C6&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;E5&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;C11&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;A7&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;E13&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;A15&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource inline='true' name='OpenStreetMap WMS' source-platform='mac' version='18.1'>
+      <connection class='OGC-WMS' description='http://ows.terrestris.de/osm/service?' full-url='http://ows.terrestris.de/osm/service?' inline='true' offline='' port='80' server='ows.terrestris.de' service='http' tileset='US/normal' url='/osm/service?' use-tiled-maps='true' />
+      <languages />
+      <properties />
+      <map-styles />
+      <mapsource-defaults version='18.1'>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='OSM-WMS' value='true' />
+          </style-rule>
+        </style>
+      </mapsource-defaults>
+    </mapsource>
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Crime Rates per Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime' name='federated.0t9qugv1con1xz16wpojo1ozo3mq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9qugv1con1xz16wpojo1ozo3mq'>
+            <column caption='Month' datatype='string' name='[MONTH]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Offense Code Group' datatype='string' name='[OFFENSE_CODE_GROUP]' role='dimension' type='nominal' />
+            <column caption='Year' datatype='string' name='[YEAR]' role='dimension' type='nominal' />
+            <column-instance column='[MONTH]' derivation='None' name='[none:MONTH:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_CODE_GROUP]' derivation='None' name='[none:OFFENSE_CODE_GROUP:nk]' pivot='key' type='nominal' />
+            <column-instance column='[YEAR]' derivation='None' name='[none:YEAR:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[Exclusions (Month,Year)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:MONTH:nk]' />
+                <groupfilter function='level-members' level='[none:YEAR:nk]' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:MONTH:nk]' member='&quot;6&quot;' />
+                  <groupfilter function='member' level='[none:YEAR:nk]' member='&quot;2015&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:MONTH:nk]' member='&quot;9&quot;' />
+                  <groupfilter function='member' level='[none:YEAR:nk]' member='&quot;2018&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]'>
+            <groupfilter function='level-members' level='[none:MONTH:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Aggravated Assault&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Criminal Harassment&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Disorderly Conduct&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Harassment&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Homicide&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Manslaughter&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Simple Assault&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[Exclusions (Month,Year)]</column>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]</column>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+              <text column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+              <lod column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#e15759' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]</rows>
+        <cols>([federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:YEAR:nk] / [federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk])</cols>
+      </table>
+      <simple-id uuid='{8E9EF249-3EB3-4755-877A-BC0A5D00D659}' />
+    </worksheet>
+    <worksheet name='Sheet 1 (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Crime Rates per Month</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime' name='federated.0t9qugv1con1xz16wpojo1ozo3mq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9qugv1con1xz16wpojo1ozo3mq'>
+            <column caption='Day Of Week' datatype='string' name='[DAY_OF_WEEK]' role='dimension' type='nominal' />
+            <column caption='Month' datatype='string' name='[MONTH]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Offense Code Group' datatype='string' name='[OFFENSE_CODE_GROUP]' role='dimension' type='nominal' />
+            <column caption='Year' datatype='string' name='[YEAR]' role='dimension' type='nominal' />
+            <column-instance column='[DAY_OF_WEEK]' derivation='None' name='[none:DAY_OF_WEEK:nk]' pivot='key' type='nominal' />
+            <column-instance column='[MONTH]' derivation='None' name='[none:MONTH:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_CODE_GROUP]' derivation='None' name='[none:OFFENSE_CODE_GROUP:nk]' pivot='key' type='nominal' />
+            <column-instance column='[YEAR]' derivation='None' name='[none:YEAR:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[Exclusions (Month,Year)]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='level-members' level='[none:MONTH:nk]' />
+                <groupfilter function='level-members' level='[none:YEAR:nk]' />
+              </groupfilter>
+              <groupfilter function='union'>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:MONTH:nk]' member='&quot;6&quot;' />
+                  <groupfilter function='member' level='[none:YEAR:nk]' member='&quot;2015&quot;' />
+                </groupfilter>
+                <groupfilter function='crossjoin'>
+                  <groupfilter function='member' level='[none:MONTH:nk]' member='&quot;9&quot;' />
+                  <groupfilter function='member' level='[none:YEAR:nk]' member='&quot;2018&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Aggravated Assault&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Criminal Harassment&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Disorderly Conduct&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Harassment&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Homicide&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Manslaughter&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Simple Assault&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[Exclusions (Month,Year)]</column>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' palette='orange_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+              <text column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+              <lod column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#e15759' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]</rows>
+        <cols>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:DAY_OF_WEEK:nk]</cols>
+      </table>
+      <simple-id uuid='{DD7CB54C-0C0A-4E64-A5F3-8AF6CF56F3EA}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Crime Map</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime' name='federated.0t9qugv1con1xz16wpojo1ozo3mq' />
+          </datasources>
+          <mapsources>
+            <mapsource name='OpenStreetMap WMS' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0t9qugv1con1xz16wpojo1ozo3mq'>
+            <column aggregation='Avg' datatype='real' name='[Lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column caption='Month' datatype='string' name='[MONTH]' role='dimension' type='nominal' />
+            <column caption='Offense Code Group' datatype='string' name='[OFFENSE_CODE_GROUP]' role='dimension' type='nominal' />
+            <column-instance column='[Lat]' derivation='None' name='[none:Lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Long]' derivation='None' name='[none:Long:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MONTH]' derivation='None' name='[none:MONTH:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_CODE_GROUP]' derivation='None' name='[none:OFFENSE_CODE_GROUP:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]'>
+            <groupfilter function='member' level='[none:MONTH:nk]' member='&quot;5&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Aggravated Assault&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Criminal Harassment&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Disorderly Conduct&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Homicide&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Manslaughter&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Simple Assault&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]</column>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:Lat:qk]' field-type='quantitative' max='5214268.8703063671' min='5202570.3254332189' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:Long:qk]' field-type='quantitative' max='-7904079.3927486548' min='-7920281.6023444394' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='OSM-WMS' value='true' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' />
+              <lod column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='0.40580111742019653' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:Lat:qk]</rows>
+        <cols>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:Long:qk]</cols>
+      </table>
+      <simple-id uuid='{DFD24E26-6827-4ED3-B79C-58A65BF85760}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Hourly Crimes</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime' name='federated.0t9qugv1con1xz16wpojo1ozo3mq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9qugv1con1xz16wpojo1ozo3mq'>
+            <column caption='Hour' datatype='string' name='[HOUR]' role='dimension' type='nominal' />
+            <column caption='Offense Code Group' datatype='string' name='[OFFENSE_CODE_GROUP]' role='dimension' type='nominal' />
+            <column-instance column='[OFFENSE_CODE_GROUP]' derivation='Count' name='[cnt:OFFENSE_CODE_GROUP:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[HOUR]' derivation='None' name='[none:HOUR:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_CODE_GROUP]' derivation='None' name='[none:OFFENSE_CODE_GROUP:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Aggravated Assault&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Auto Theft&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Auto Theft Recovery&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Disorderly Conduct&quot;' />
+              <groupfilter function='member' level='[none:OFFENSE_CODE_GROUP:nk]' member='&quot;Simple Assault&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:HOUR:nk]' value='33' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' />
+              <text column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[cnt:OFFENSE_CODE_GROUP:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[cnt:OFFENSE_CODE_GROUP:qk]</rows>
+        <cols>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:HOUR:nk]</cols>
+      </table>
+      <simple-id uuid='{005ABA02-FC61-4BFC-80EA-3ABADAAF582A}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Overall Crime Treemap</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='crime' name='federated.0t9qugv1con1xz16wpojo1ozo3mq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0t9qugv1con1xz16wpojo1ozo3mq'>
+            <column caption='District' datatype='string' name='[DISTRICT]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Offense Description' datatype='string' name='[OFFENSE_DESCRIPTION]' role='dimension' type='nominal' />
+            <column-instance column='[DISTRICT]' derivation='None' name='[none:DISTRICT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[OFFENSE_DESCRIPTION]' derivation='None' name='[none:OFFENSE_DESCRIPTION:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:DISTRICT:nk]'>
+            <groupfilter function='level-members' level='[none:DISTRICT:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:DISTRICT:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+              <color column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+              <text column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_DESCRIPTION:nk]' />
+              <text column='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{BADE2442-2BD2-4144-B3DF-93F03D1B2D3C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Boston Crime</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Overall Crime Treemap' captured-sheet='Sheet 5' id='1' />
+                  <story-point caption='Crime Rates per Year/Month' captured-sheet='Sheet 1' id='2' />
+                  <story-point caption='Crime Rates by weekday' captured-sheet='Sheet 1 (2)' id='3' />
+                  <story-point caption='Hourly Crimes' captured-sheet='Sheet 4' id='6' />
+                  <story-point caption='Crime Map' captured-sheet='Sheet 3' id='4'>
+                    <capturedDeltas>
+                      <worksheet name='Sheet 3'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:Lat:qk]' field-type='quantitative' max='5218942.175323762' min='5203251.8212904353' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:Long:qk]' field-type='quantitative' max='-7903193.4882142562' min='-7919395.6978100408' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{ACF52D09-ED3A-42E9-9127-4E0A0E4C5149}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' type='filter' />
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{322E5D8E-19CA-455C-B9AB-E73AE5B55ADD}' />
+    </window>
+    <window class='worksheet' name='Sheet 1 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='168'>
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F05E7FA9-C6E7-4C90-9BE8-C18EF2079144}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:MONTH:nk]' type='filter' />
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <map-scale-visibility value='0' />
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{D58B330B-D4D9-430C-B70B-87F0E8312A15}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:OFFENSE_CODE_GROUP:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{267E8EDA-24A0-4ED8-963E-13047609ACE9}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[none:DISTRICT:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0t9qugv1con1xz16wpojo1ozo3mq].[sum:Number of Records:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5FD34015-9A4B-48A8-B9E5-8147652DC8BA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{92520140-5D7A-4454-BDD7-D784A2D77BB3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Story 1' width='192'>
+      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
+      XSjgA7W1/vWRxPGaLO8qgLZpcWdujenR/jf6SC5Jy7Dw8Wkb/YLbNm16PY9G22Q4lyQR1fnn
+      //iMkVyStmnj+X1HZt/3+eDOfF9E8TBtw6LaMhCE/g4y5brF1EiWhbUavZ7XN97aJ2+M5Vmq
+      tZjOJ6l1+h2dwWQEw3aQNzxxbNfjN3PHa6Q7eOnq1u/D1/pNDz2RfKYwx3L5jZ/9QqSENPQE
+      xAeev61RfvzcE69TG+/Jjn5xLJnvp5seOnz78fTg4K6vnybz1PmnXx8Xuwrg4XK/KfFwo0lR
+      qrUfO/vsiMjyY65rxSeu7TO/1n/PwlOjKfcXSxu/rT83w7uxVOtXq+W2iSJJqJJIqWXSMC3e
+      GMtzc7nM+Xzyhe5xEMpzD3EtC1GW6NkO0WwWgE61gp5I0iquE83mMWoVksOjhJP7t0qc+c2v
+      SQ4M0K5WiSSTdBoNYukMdtdEi0RpFNeJJJMkcnm6RmdLDGedA7lDr5QaJKI6D5bL5FOxfTdV
+      joqwKuP7Pqos0eo6NEyLTETDdFzee7iKIom89/D4bdStdv/LID5QwDY6LHz84Va7Xo8nqMw/
+      RFIUuq3mgU1iK0tLW+1wx7YwWy0kWcaxLGzTJDlQYOnuHdq1GrKinrgAVh482LWTfFzszR16
+      eghBgDtz60wNZ5kYylBvm1yfHiKkyC+NAOa2camuG4czTv5i+Bs1gIyshhi4cAmATrUMCAxe
+      vo5rW6iRKN1Wc6sptB8mXn+daCrN8sw99FiMZL6AZXSwTZN4NsvawwdkR8eQZAlvw+/zJHkZ
+      Cj88RwB6SGG8kKbaNIhFNFKxvjt0pdHhykSBUq1NLrm713wADF/70hcvojGi2b4V+m7Dmvul
+      MNkvUBe/8tVDS/Ms8Bx36P5k2BPu0Pf7JrkrpcaJm86+Kqzfv4eeSKInEqx+fovU8CjtSplI
+      OkOnWmHw8tXnJxJwJOwpHHrTHfrxAh8U/r1jtZt0mw2sVguna3Lzf/2UbrOBHNKoLc2fdPbO
+      NMF6gGNAi8ZxrS62aaDoYSa+/FV838Ns1NDiJ7+54FnmVIVCvKzkz1+k5zgIkkh69Emf0Mz4
+      xAnlKgACARwbkqIcSbojsWAQ4kUIBPCKs9R6dsLxRZhOxQ41vZedoA9wSvF6vZPOwitBUAOc
+      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
+      pgkEEHCm+f8BAP3NUZIDm4QAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
