@@ -1,0 +1,1 @@
+This is document 7 in directory dir7
